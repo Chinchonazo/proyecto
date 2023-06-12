@@ -7,6 +7,44 @@
     <title>Index</title>
 </head>
 <style>
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
     body {margin:0;}
     ul {
         list-style-type: none;
@@ -53,7 +91,9 @@
         
         Las indicaciones en las que se obtendrán mayores beneficios son en la resonancia magnética intraoperatoria las cirugías oncológicas, especialmente las de neurocirugía, como tumores cerebrales y Parkinson, y algunos procedimientos de Urología y Ginecología. Los quirófanos híbridos están especialmente dotados para angiografías e intervenciones mínimamente invasivas vasculares (Radiología Intervencionista y Hemodinámica) , cirugías vasculares y cirugías cardiacas.</p></font>
         <h3>Picar en la imagen para saber mas acerca de una clinica de quirofanos-hibridos</h3>
-        <a href="https://www.cun.es/quienes-somos/la-clinica/tecnologia/quirofanos-hibridos"><img src="m7.jpg"  title = "Para mas Informacion"></a>
+    <div class="tooltip">Hover over me
+  <span class="tooltiptext"><a href="https://www.cun.es/quienes-somos/la-clinica/tecnologia/quirofanos-hibridos"><img src="m7.jpg"  title = "Para mas Informacion"></a></span>
+</div>
         <br><br><br><br><br><br><br>
         <video controls>
             <source src="Estrenamos un quirófano híbrido de última generación (1).mp4" type="video/mp4">
